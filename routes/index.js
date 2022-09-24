@@ -9,4 +9,15 @@ module.exports=router;
 
 
 //to check whether this page is loaded or not
-console.log("****Router is loaded****")
+console.log("****Router is loaded****");
+
+
+
+
+// so here we have to access the filr home_controller.js file which is in the folder controller
+const homeController=require('../controllers/home_controller');
+
+
+// now we have to access the function of the page home_controller present in the controller filder.
+router.get('/',homeController.home);
+
