@@ -3,8 +3,13 @@ const express=require('express');
 const app=express();
 
 
-// so as we've export the express router in the index.js which is in the router folder, now we have to tell app to use it.
-app.use('/', require('./routes'));
+// so as we've exported the express router in the index.js which is in the router folder, now we have to tell app to use it.
+
+
+// app.use('/', require('./routes'));
+
+const routes=require('./routes');
+app.use('/',routes);
 
 
 
