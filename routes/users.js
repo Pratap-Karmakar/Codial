@@ -14,7 +14,7 @@ module.exports=router;
 
 // so here we have to access the file home_controller.js file which is in the folder controller
 
-const userController=require('../controllers/users_controller');
+const usersController=require('../controllers/users_controller');
 
 
 
@@ -22,4 +22,4 @@ const userController=require('../controllers/users_controller');
 
 // now we have to access the function of the page home_controller present in the controller filder.
 
-router.get('/profile',userController.profile);
+router.get('/profile',usersController.profile);

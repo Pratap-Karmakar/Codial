@@ -18,12 +18,18 @@ const homeController=require('../controllers/home_controller');
 
 /////// function accessing
 
+
 // now we have to access the function of the page home_controller present in the controller filder.
 router.get('/',homeController.home);
 
 
+// as this index.js of routes folder is exported and imported in the main index.js so this page is the main router and we hove to import all the controllers in this page so that all the controllers can be accessable in the main index.js,  
 
-router.use('/users',require('./users'))
+// so any further routes, access from here.
+// router.use('/routername', require('/routerfile'));
+
+
+router.use('/users',require('./users'));
 
 
 
