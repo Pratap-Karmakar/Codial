@@ -13,6 +13,13 @@ app.use('/',routes);
 
 
 
+// setting up the ejs view engine
+
+app.set('view engine', 'ejs');
+// app.set('views',path.join(__dirname));
+app.set('views','./viewa');
+
+
 
 app.listen(port,(error) => {    // => means that it is a function and 'error' is it's argument
     if(error){
