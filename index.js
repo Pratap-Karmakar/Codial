@@ -1,4 +1,4 @@
-const port=7000;
+const port=8000;
 const express=require('express');
 const app=express();
 
@@ -17,7 +17,7 @@ app.use('/',routes);
 
 app.set('view engine', 'ejs');
 // app.set('views',path.join(__dirname));
-app.set('views','./viewa');
+app.set('views','./views');
 
 
 
