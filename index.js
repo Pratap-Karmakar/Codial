@@ -1,6 +1,6 @@
-const port=8000;
-const express=require('express');
-const app=express();
+const port = 8000;
+const express = require('express');
+const app = express();
 
 
 // so as we've exported the express router in the index.js which is in the router folder, now we have to tell app to use it.
@@ -8,8 +8,8 @@ const app=express();
 
 // app.use('/', require('./routes'));
 
-const routes=require('./routes');
-app.use('/',routes);
+const routes = require('./routes');
+app.use('/', routes);
 
 
 
@@ -17,15 +17,15 @@ app.use('/',routes);
 
 app.set('view engine', 'ejs');
 // app.set('views',path.join(__dirname));
-app.set('views','./views');
+app.set('views', './views');
 
 
 
-app.listen(port,(error) => {    // => means that it is a function and 'error' is it's argument
-    if(error){
+app.listen(port, (error) => {    // => means that it is a function and 'error' is it's argument
+    if (error) {
         console.log(`Error : ${error}`);
     }
-    else{
+    else {
         console.log(`Server On : ${port}`);
     }
 })
