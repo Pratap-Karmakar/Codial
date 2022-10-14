@@ -20,6 +20,17 @@ const usersController=require('../controllers/users_controller');
 
 /////// function accessing
 
-// now we have to access the function of the page home_controller present in the controller filder.
+// now we have to access the function of the page home_controller which is present in the controller folder.
 
 router.get('/profile',usersController.profile);
+
+
+
+
+// now we have to access the function of the page user_controller which is present in the controller folder.
+
+router.get('/sign-up', usersController.signUp);
+
+// now we have to access the function of the page user_controller which is present in the controller folder.
+
+router.get('/sign-in', usersController.signIn);
