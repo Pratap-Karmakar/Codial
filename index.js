@@ -12,14 +12,20 @@ app.use(express.static('./assets'));
 const routes = require('./routes');
 app.use('/', routes);
 
+
+// database
+
 const db=require('./config/mongoose');
 
 // cookie
 
 const cookieParser=require('cookie-parser');
 
+//middleware
 
+app.use(express.urlencoded());
 
+app.use(cookieParser());
 
 // setting up the ejs view engine
 
