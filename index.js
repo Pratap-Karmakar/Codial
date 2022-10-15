@@ -2,6 +2,7 @@ const port = 8000;
 const express = require('express');
 const app = express();
 
+app.use(express.static('./assets'));
 
 // so as we've exported the express router in the index.js which is in the router folder, now we have to tell app to use it.
 
@@ -10,6 +11,12 @@ const app = express();
 
 const routes = require('./routes');
 app.use('/', routes);
+
+const db=require('./config/mongoose');
+
+// cookie
+
+const cookieParser=require('cookie-parser');
 
 
 
