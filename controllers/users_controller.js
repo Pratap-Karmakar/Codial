@@ -22,15 +22,16 @@ module.exports.profile = function (req, res) {
 
 module.exports.signUp = function (req, res) {
     return res.render('user_sign_up', {
-        title: "Codial | Sign up"
+        title: "Sign up"
     })
 }
+
 
 // To render the sign_up page
 
 module.exports.signIn = function (req, res) {
     return res.render('user_sign_in', {
-        title: "Codial | Sign in"
+        title: "Sign in"
     })
 }
 
