@@ -26,6 +26,12 @@ module.exports.signUp = function (req, res) {
     })
 }
 
+// To get the sign up data
+
+module.exports.create = function(req,res){
+    
+}
+
 
 // To render the sign_up page
 
@@ -33,5 +39,11 @@ module.exports.signIn = function (req, res) {
     return res.render('user_sign_in', {
         title: "Sign in"
     })
+}
+
+// To get the 
+
+module.exports.createSession=function(req,res){
+    
 }
 
