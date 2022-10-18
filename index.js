@@ -2,6 +2,12 @@ const port = 8000;
 const express = require('express');
 const app = express();
 
+
+// app.use(express.urlencoded({extended:true}));
+
+app.use(express.urlencoded());
+
+
 app.use(express.static('./assets'));
 
 // so as we've exported the express router in the index.js which is in the router folder, now we have to tell app to use it.
