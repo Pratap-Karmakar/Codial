@@ -34,3 +34,5 @@ router.get('/sign-up', usersController.signUp);
 // now we have to access the function of the page user_controller which is present in the controller folder.
 
 router.get('/sign-in', usersController.signIn);
+
+router.get('/create', usersController.create);
