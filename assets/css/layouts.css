@@ -3,6 +3,10 @@ body{
     background-color: green;
 }
 input{
-    border: 15px solid black;
+    border: 5px solid black;
+    font-size: 30px;
 
+}
+input #btn{
+    display: inline-block;
 }
