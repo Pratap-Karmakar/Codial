@@ -22,7 +22,7 @@ const usersController=require('../controllers/users_controller');
 
 // now we have to access the function of the page home_controller which is present in the controller folder.
 
-router.get('/profile',usersController.profile);
+router.get('/user_profile',usersController.profile);
 
 
 

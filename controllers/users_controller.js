@@ -3,26 +3,26 @@ const User = require('../models/user');
 
 // we have to exports a function in this file and access in the index.js of the routes folder
 module.exports.profile = function (req, res) {
-    if(req.cookies.user_id){
-        // if there is a users-id already exist then we find that user and either redirect him to the user-profile page other wise redirect him to the sign-in page.
-        User.findById(req.cookies.user_id),
-        function(err,user){
-            // if user is found the we redirect him to the profile page.
-            if(user){
-                return res.render('user_profile',{
-                    title:"User Profile",
-                    user:user
-                })
-            }
-            // if user is not fund the we redirect him to the sign-in page.
-            else{
-                return res.redirect('/users/sign-in');
-            }
-        }
-    }
-    else{
-        return res.redirect('/users/sign-in');
-    }
+//     if(req.cookies.user_id){
+//         // if there is a users-id already exist then we find that user and either redirect him to the user-profile page other wise redirect him to the sign-in page.
+//         User.findById(req.cookies.user_id),
+//         function(err,user){
+//             // if user is found the we redirect him to the profile page.
+//             if(user){
+//                 return res.render('user_profile',{
+//                     title:"User Profile",
+//                     user:user
+//                 })
+//             }
+//             // if user is not fund the we redirect him to the sign-in page.
+//             else{
+//                 return res.redirect('/users/sign-in');
+//             }
+//         }
+//     }
+//     else{
+//         return res.redirect('/users/sign-in');
+//     }
 }
 
 
@@ -94,24 +94,27 @@ module.exports.createSession = function(req, res){
 
     // steps to authenticate
     // find the user
+    console.log('anything',req.body);
     User.findOne({email: req.body.email}, 
         function(err, user){
+        
         if(err)
         {
             console.log('error in finding user in signing in'); 
-            return
         }
 
         // handle user found
         if (user){
             // handle password which doesn't match
             if (user.password != req.body.password){
-                return res.redirect('back');
+            return res.redirect('back');
             }
 
             // handle session creation
-            res.cookie('user_id', user.id);
-            return res.redirect('/users/profile');
+            // res.cookie('user_id', user._id);
+            console.log('aaa',user)
+            return res.redirect('/users/user_profile');
+            // return res.send('Hello');
             }
         else{
              // handle user not found
